@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إثبات الدفع</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .form-container {
+        max-width: 400px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555;
+      }
+      input[type="text"],
+      input[type="url"],
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #4cae4c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>إثبات الدفع</h1>
+    <div class="form-container">
+      <form id="paymentForm">
+        <label for="name">اسم العميل:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="amount">المبلغ المدفوع:</label>
+        <input type="text" id="amount" name="amount" required />
+
+        <label for="proof">رابط إثبات الدفع:</label>
+        <input type="url" id="proof" name="proof" required />
+
+        <button type="submit">إرسال إثبات الدفع</button>
+      </form>
+    </div>
+
+    <script src="./pay.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خيارات الدفع</title>
+    <link rel="stylesheet" href="./instapay.css" />
+    <style>
+      /* إعداد الخطوط والألوان */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #333;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #555;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      .payment-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .payment-button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .payment-button:hover {
+        background-color: #0572bb;
+      }
+
+      img {
+        width: 80%;
+        max-width: 300px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .contact-info {
+        font-weight: bold;
+        color: #088cc9;
+        font-size: 1.1rem;
+      }
+
+      .btn-primary {
+        background-color: #071952;
+        color: #fff;
+        padding: 8px 20px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none; /* لإزالة الخط السفلي */
+        display: inline-block; /* لتحسين تنسيق الزر */
+        margin-top: 20px; /* تباعد فوق الزر */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>خيارات الدفع</h2>
+      <p>يرجى اختيار طريقة الدفع المناسبة لك:</p>
+
+      <div class="payment-methods">
+        <!-- الدفع عبر PayPal -->
+        <button class="payment-button" onclick="payWithPayPal()">
+          الدفع عبر PayPal
+        </button>
+
+        <!-- الدفع عبر Vodafone Cash -->
+        <button class="payment-button" onclick="payWithVodafone()">
+          الدفع عبر Vodafone Cash
+        </button>
+      </div>
+
+      <!-- رابط إثبات الدفع -->
+      <a href="./pay.html" class="btn-primary">إثبات الدفع</a>
+    </div>
+
+    <script>
+      // تفعيل الدفع عبر PayPal
+      function payWithPayPal() {
+        window.location.href =
+          "https://paypal.me/AhmedHesham861?country.x=EG&locale.x=ar_EG"; // ضع رابط PayPal الخاص بك هنا
+      }
+
+      // تفعيل الدفع عبر Vodafone Cash
+      function payWithVodafone() {
+        alert(
+          "للدفع عبر Vodafone Cash، يرجى إرسال المبلغ إلى الرقم 01095334341. بعد الدفع، يرجى تحميل إثبات الدفع."
+        );
+      }
+
+      // تفعيل الدفع عبر InstaPay
+      function payWithInstaPay() {
+        alert(
+          "للدفع عبر InstaPay، يرجى مسح كود QR أدناه باستخدام تطبيق InstaPay."
+        );
+        // هنا يمكنك توجيه المستخدم إلى صفحة تحتوي على كود QR أو تعليمات إضافية
+      }
+    </script>
+  </body>
+</html>
