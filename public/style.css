@@ -105,7 +105,7 @@ a {
 }
 
 .navbar {
-  background-color: #37b7c3;
+  background-color: #27aaa4a9;
   border-bottom: 1px solid #ccc;
   position: fixed;
   width: 100%;
@@ -597,14 +597,15 @@ a {
 }
 
 /* Footer End */
-/* Respnsiveness Start */
-@media (max-width: 1050px) {
+/* Responsiveness Start */
+/* Styles for small screens */
+@media (max-width: 400px) {
   #home .home-content h1 {
     font-size: 40px;
   }
 
   .home-content img {
-    max-width: 300px;
+    max-width: 100%;
   }
 
   #about .about-content {
